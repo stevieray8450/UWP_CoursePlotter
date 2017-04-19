@@ -39,17 +39,5 @@
         <Button x:Name="course3Btn" Content="Course 3" HorizontalAlignment="Center" Margin="272,561,10,0" VerticalAlignment="Top" Background="#FF00A200" Click="course3Btn_Click"/>
         <TextBlock x:Name="aboutCourse" HorizontalAlignment="Center" Margin="12,208,93,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="257" Width="255" FontSize="11"/>
         <TextBlock x:Name="coursePrereq" HorizontalAlignment="Center" Margin="10,369,10,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" FontSize="10" Height="96" Width="340" FontStyle="Italic"/>
-        <ListView x:Name="comments" HorizontalAlignment="Left" Height="47" Margin="10,470,0,0" VerticalAlignment="Top" Width="340">
-            <ListView.ItemTemplate>
-                <DataTemplate>
-                    <StackPanel Orientation="Horizontal" Height="194" Width="324">
-                        <CheckBox Name="CheckBoxComplete" IsChecked="{Binding Complete, Mode=TwoWay}" Checked="CheckBoxComplete_Checked" Content="{Binding Text}" Margin="10,5" VerticalAlignment="Center" Width="Auto"/>
-                    </StackPanel>
-                </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
-        <Button x:Name="submitComment" Content="Submit" HorizontalAlignment="Left" Margin="272,517,0,0" VerticalAlignment="Top" Width="80" Click="submitComment_Click"/>
-        <TextBox x:Name="txtBoxComment" HorizontalAlignment="Left" Margin="10,517,0,0" TextWrapping="Wrap" Text="Insert course comment here!" VerticalAlignment="Top" Width="257"/>
-        <Button x:Name="btnRefresh" Content="Refresh" HorizontalAlignment="Left" Margin="272,598,0,0" VerticalAlignment="Top" Click="btnRefresh_Click"/>
     </Grid>
 </Page>

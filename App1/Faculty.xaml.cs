@@ -8,33 +8,6 @@ using Windows.UI.Popups;
 using Microsoft.WindowsAzure.MobileServices.Sync;
 using Microsoft.WindowsAzure.MobileServices.SQLiteStore;
 
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Runtime.InteropServices.WindowsRuntime;
-using Windows.Foundation;
-using Windows.Foundation.Collections;
-using Windows.UI.Xaml;
-using Windows.UI.Xaml.Controls;
-using Windows.UI.Xaml.Controls.Primitives;
-using Windows.UI.Xaml.Data;
-using Windows.UI.Xaml.Input;
-using Windows.UI.Xaml.Media;
-using Windows.UI.Xaml.Navigation;
-using Microsoft.WindowsAzure.MobileServices;
-using System.Threading.Tasks;
-using Windows.UI.Popups;
-using Windows.Storage;
-using System.Net.Http;
-using Newtonsoft.Json;
-
-using SQLite;
-using SQLite.Net;
-using SQLite.Net.Async;
-using Microsoft.WindowsAzure.MobileServices.Sync;
-using Microsoft.WindowsAzure.MobileServices.SQLiteStore;
-
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -147,72 +120,72 @@ namespace App1
         //    await courseCommentsTable.PullAsync("CourseComments", courseCommentsTable.CreateQuery());
         //}
 
-        async private void submitComment_Click(object sender, RoutedEventArgs e)
-        {
-            try
-            {
-                CourseComment item = new CourseComment
-                {
-                    comment = txtBoxComment.Text,
-                    isComment = false
-                };
-                await App.MobileService.GetTable<CourseComment>().InsertAsync(item);
-                var dialog = new MessageDialog("Your comment has been recorded.");
-                await dialog.ShowAsync();
-            }
-            catch (Exception em)
-            {
-                var dialog = new MessageDialog("An error occurred: " + em.Message);
-                await dialog.ShowAsync();
-            }
-        }
+        //async private void submitComment_Click(object sender, RoutedEventArgs e)
+        //{
+        //    try
+        //    {
+        //        CourseComment item = new CourseComment
+        //        {
+        //            comment = txtBoxComment.Text,
+        //            isComment = false
+        //        };
+        //        await App.MobileService.GetTable<CourseComment>().InsertAsync(item);
+        //        var dialog = new MessageDialog("Your comment has been recorded.");
+        //        await dialog.ShowAsync();
+        //    }
+        //    catch (Exception em)
+        //    {
+        //        var dialog = new MessageDialog("An error occurred: " + em.Message);
+        //        await dialog.ShowAsync();
+        //    }
+        //}
 
-        async private void btnRefresh_Click(object sender, RoutedEventArgs e)
-        {
-            //RefreshComments();
-            await RefreshComments();
-        }
+        //async private void btnRefresh_Click(object sender, RoutedEventArgs e)
+        //{
+        //    //RefreshComments();
+        //    await RefreshComments();
+        //}
 
-        private async Task RefreshComments()
-        {
-            MobileServiceInvalidOperationException exception = null;
-            try
-            {
-                items = await courseCommentsTable
-                    .Where(CourseComment => CourseComment.isComment == false)
-                    .ToCollectionAsync();
-            }
-            catch (MobileServiceInvalidOperationException e)
-            {
-                exception = e;
-            }
-            if(exception != null)
-            {
-                await new MessageDialog(exception.Message, "Error loading items").ShowAsync();
-            }
-            else
-            {
-                comments.ItemsSource = items;
-                this.btnRefresh.IsEnabled = true;
-            }
-        }
+        //private async Task RefreshComments()
+        //{
+        //    MobileServiceInvalidOperationException exception = null;
+        //    try
+        //    {
+        //        items = await courseCommentsTable
+        //            .Where(CourseComment => CourseComment.isComment == false)
+        //            .ToCollectionAsync();
+        //    }
+        //    catch (MobileServiceInvalidOperationException e)
+        //    {
+        //        exception = e;
+        //    }
+        //    if(exception != null)
+        //    {
+        //        await new MessageDialog(exception.Message, "Error loading items").ShowAsync();
+        //    }
+        //    else
+        //    {
+        //        comments.ItemsSource = items;
+        //        this.btnRefresh.IsEnabled = true;
+        //    }
+        //}
 
-        private async void CheckBoxComplete_Checked(object sender, RoutedEventArgs e)
-        {
-            CheckBox cb = (CheckBox)sender;
-            CourseComment item = cb.DataContext as CourseComment;
-            await UpdateCheckedTodoItem(item);
-        }
+        //private async void CheckBoxComplete_Checked(object sender, RoutedEventArgs e)
+        //{
+        //    CheckBox cb = (CheckBox)sender;
+        //    CourseComment item = cb.DataContext as CourseComment;
+        //    await UpdateCheckedTodoItem(item);
+        //}
 
-        private async Task UpdateCheckedTodoItem(CourseComment item)
-        {
-            // This code takes a freshly completed TodoItem and updates the database. When the MobileService 
-            // responds, the item is removed from the list 
-            await courseCommentsTable.UpdateAsync(item);
-            items.Remove(item);
-            comments.Focus(Windows.UI.Xaml.FocusState.Unfocused);
+        //private async Task UpdateCheckedTodoItem(CourseComment item)
+        //{
+        //    // This code takes a freshly completed TodoItem and updates the database. When the MobileService 
+        //    // responds, the item is removed from the list 
+        //    await courseCommentsTable.UpdateAsync(item);
+        //    items.Remove(item);
+        //    comments.Focus(Windows.UI.Xaml.FocusState.Unfocused);
 
-            //await SyncAsync(); // offline sync
+            ////await SyncAsync(); // offline sync
         }
     }
 }
