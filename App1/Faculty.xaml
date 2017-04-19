@@ -1,0 +1,55 @@
+﻿<Page
+    x:Class="App1.Faculty"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:App1"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <HyperlinkButton x:Uid="imageLink" HorizontalAlignment="Center" VerticalAlignment="Top">
+            <Image x:Name="image" HorizontalAlignment="Center" Height="55" Margin="10,16,0,0" VerticalAlignment="Top" Width="291" 
+               Source="http://www.rasmussen.edu/images/logo-internal.png" />
+        </HyperlinkButton>
+        <Image Opacity="0.35" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,148,0,132">
+            <Image.Source>
+                <BitmapImage x:Name="rasIcon" DecodePixelWidth="200" UriSource="rasIcon.jpeg" />
+            </Image.Source>
+        </Image>
+
+        <Grid HorizontalAlignment="Center" Height="37" VerticalAlignment="Top" Width="340" Margin="10,104,10,0">
+            <HyperlinkButton x:Uid="hlkWebSite" Content="Go" HorizontalAlignment="Left" Margin="251,-283,0,295" VerticalAlignment="Center" Foreground="#FF00A200" FontSize="10" Width="79"/>
+            <HyperlinkButton x:Name="hypLinkPage2" Content="Faculty Page" HorizontalAlignment="Center" Margin="10,12,275,0" VerticalAlignment="Center" Foreground="#FF00A200" FontSize="10" Click="hypLinkPage2_Click"/>
+            <HyperlinkButton Content="To Do Items" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,12,196,0" Foreground="#FF00A200" FontSize="10" Click="HyperlinkButton_Click"/>
+            <HyperlinkButton x:Name="todo2" Content="To Do 2" HorizontalAlignment="Left" Margin="177,12,0,0" VerticalAlignment="Center" Foreground="#FF00A200" FontSize="10" Click="todo2_Click"/>
+            <HyperlinkButton x:Name="invPage" Content="Inventory Page" HorizontalAlignment="Left" Margin="239,12,0,0" VerticalAlignment="Top" Foreground="#FF00A200" FontSize="10" Width="91" Click="invPage_Click"/>
+
+        </Grid>
+        <TextBox x:Name="txtBoxFooter" HorizontalAlignment="Center" Margin="10,598,93,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="257" BorderBrush="#FFFDFDFD" IsReadOnly="True" FontSize="10" FontStyle="Italic" Opacity="0.75" RenderTransformOrigin="0.5,0.5">
+        </TextBox>
+        <TextBlock x:Name="txtCourse" HorizontalAlignment="Center" Margin="10,148,19,460" TextWrapping="Wrap" VerticalAlignment="Stretch" FontSize="11" Width="331">
+            <Run Text="TextBlock"/>
+        </TextBlock>
+        <TextBlock x:Name="courseFaculty" HorizontalAlignment="Center" Margin="10,185,240,437" TextWrapping="Wrap" Text="" VerticalAlignment="Stretch" FontSize="10" FontStyle="Italic" Width="110"/>
+
+        <Image x:Name="courseFacultyPic" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,180,10,0" Height="87" Width="83" RenderTransformOrigin="0.244,0.362" />
+        <Button x:Name="course1Btn" Content="Course 1" HorizontalAlignment="Center" Margin="10,561,272,0" VerticalAlignment="Top" Background="#FF00A200" Click="button_Click"/>
+        <Button x:Name="course2Btn" Content="Course 2" HorizontalAlignment="Center" Margin="145,561,137,0" VerticalAlignment="Top" Background="#FF00A200" Click="course2Btn_Click"/>
+        <Button x:Name="course3Btn" Content="Course 3" HorizontalAlignment="Center" Margin="272,561,10,0" VerticalAlignment="Top" Background="#FF00A200" Click="course3Btn_Click"/>
+        <TextBlock x:Name="aboutCourse" HorizontalAlignment="Center" Margin="12,208,93,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="257" Width="255" FontSize="11"/>
+        <TextBlock x:Name="coursePrereq" HorizontalAlignment="Center" Margin="10,369,10,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" FontSize="10" Height="96" Width="340" FontStyle="Italic"/>
+        <ListView x:Name="comments" HorizontalAlignment="Left" Height="47" Margin="10,470,0,0" VerticalAlignment="Top" Width="340">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal" Height="194" Width="324">
+                        <CheckBox Name="CheckBoxComplete" IsChecked="{Binding Complete, Mode=TwoWay}" Checked="CheckBoxComplete_Checked" Content="{Binding Text}" Margin="10,5" VerticalAlignment="Center" Width="Auto"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <Button x:Name="submitComment" Content="Submit" HorizontalAlignment="Left" Margin="272,517,0,0" VerticalAlignment="Top" Width="80" Click="submitComment_Click"/>
+        <TextBox x:Name="txtBoxComment" HorizontalAlignment="Left" Margin="10,517,0,0" TextWrapping="Wrap" Text="Insert course comment here!" VerticalAlignment="Top" Width="257"/>
+        <Button x:Name="btnRefresh" Content="Refresh" HorizontalAlignment="Left" Margin="272,598,0,0" VerticalAlignment="Top" Click="btnRefresh_Click"/>
+    </Grid>
+</Page>
