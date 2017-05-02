@@ -187,7 +187,6 @@ namespace App1
 
             ////await SyncAsync(); // offline sync
         }
-    }
 }
 
 

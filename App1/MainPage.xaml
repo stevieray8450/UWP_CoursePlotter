@@ -36,7 +36,8 @@
         <Button x:Name="btnRefresh" Content="Refresh" HorizontalAlignment="Center" Margin="218,540,10,68" VerticalAlignment="Center" Width="132" Click="btnRefresh_Click"/>
         <Button x:Name="Submit" Content="Submit" HorizontalAlignment="Center" Margin="218,484,10,105" VerticalAlignment="Center" Width="132" Height="51" Click="Submit_Click"/>
         <TextBlock x:Uid="txtFooter" x:Name="txtFooter" HorizontalAlignment="Stretch" Margin="151,610,147,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Bottom" FontFamily="Arial Narrow"/>
-        <Button x:Name="btnGetAPI" Content="Get API Info" HorizontalAlignment="Left" Margin="10,146,0,0" VerticalAlignment="Top" Click="btnGetAPI_Click"/>
+        <Button x:Name="btnGetAPI" Content="Get API &#xD;&#xA;Info" HorizontalAlignment="Left" Margin="10,146,0,0" VerticalAlignment="Top" Click="btnGetAPI_Click" Height="67" Width="132"/>
+        <Button x:Name="button" Content="Google &#xD;&#xA;Auth" HorizontalAlignment="Right" Margin="0,146,10,0" VerticalAlignment="Top" Click="button_Click" Height="67" Width="132"/>
 
     </Grid>
 </Page>

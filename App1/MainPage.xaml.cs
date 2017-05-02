@@ -179,5 +179,10 @@ namespace App1
         {
             this.Frame.Navigate(typeof(InvPage));
         }
+
+        private void button_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(GoogleAuth));
+        }
     }
 }
