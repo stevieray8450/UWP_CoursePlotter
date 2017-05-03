@@ -184,5 +184,10 @@ namespace App1
         {
             this.Frame.Navigate(typeof(GoogleAuth));
         }
+
+        private void GPACalcPage_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(GPACalc));
+        }
     }
 }

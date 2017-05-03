@@ -1,0 +1,225 @@
+﻿<Page
+    x:Class="App1.GPACalc"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:App1"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Image x:Name="topLogo" HorizontalAlignment="Center" Height="94" Margin="112,10,112,0" VerticalAlignment="Top" Width="136" Source="rasCollege.jpg"/>
+
+        <Grid HorizontalAlignment="Center" Height="37" VerticalAlignment="Top" Width="340" Margin="10,104,10,0">
+            <HyperlinkButton x:Name="hypLinkPage2" Content="Faculty Page" HorizontalAlignment="Left" Margin="10,12,0,0" VerticalAlignment="Center" Foreground="#FF00A200" FontSize="10" Click="hypLinkPage2_Click"/>
+            <HyperlinkButton Content="To Do Items" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,12,217,0" Foreground="#FF00A200" FontSize="10" Click="HyperlinkButton_Click"/>
+            <HyperlinkButton x:Name="todo2" Content="To Do 2" HorizontalAlignment="Left" Margin="128,12,0,0" VerticalAlignment="Center" Foreground="#FF00A200" FontSize="10" Click="todo2_Click"/>
+            <HyperlinkButton x:Name="invPage" Content="Inventory Page" HorizontalAlignment="Left" Margin="167,12,0,0" VerticalAlignment="Top" Foreground="#FF00A200" FontSize="10" Width="91" Click="invPage_Click"/>
+            <HyperlinkButton x:Name="GPACalcPage" Content="GPA Calculator" HorizontalAlignment="Stretch" Margin="258,12,10,0" VerticalAlignment="Top" FontSize="10" Foreground="#FF00A200" Click="GPACalcPage_Click"/>
+        </Grid>
+
+        <Grid Height="484" Margin="10,146,10,0" VerticalAlignment="Top">
+            <Grid x:Name="courseID" HorizontalAlignment="Left" Height="464" Margin="10,10,0,0" VerticalAlignment="Top" Width="132">
+                <TextBlock x:Name="course" HorizontalAlignment="Center" Margin="10,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top">
+                    <Run Text="Course "/>
+                    <LineBreak/>
+                    <Run Text="ID"/>
+                </TextBlock>
+                <TextBox x:Name="textBox" HorizontalAlignment="Left" Margin="10,55,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="112"/>
+                <TextBox x:Name="textBox1" HorizontalAlignment="Left" Margin="10,92,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="112"/>
+                <TextBox x:Name="textBox2" HorizontalAlignment="Left" Margin="10,129,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="112"/>
+                <TextBox x:Name="textBox3" HorizontalAlignment="Left" Margin="10,166,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="112"/>
+                <TextBox x:Name="textBox4" HorizontalAlignment="Left" Margin="10,203,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="112"/>
+                <TextBox x:Name="textBox5" HorizontalAlignment="Left" Margin="10,240,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="112"/>
+                <TextBox x:Name="textBox6" HorizontalAlignment="Left" Margin="10,277,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="112"/>
+                <TextBox x:Name="textBox7" HorizontalAlignment="Left" Margin="10,314,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="112"/>
+                <TextBox x:Name="textBox8" HorizontalAlignment="Left" Margin="10,351,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="112"/>
+                <TextBox x:Name="textBox9" HorizontalAlignment="Left" Margin="10,388,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="112"/>
+                <Button x:Name="calcGPAbtn" Content="Calculate GPA" HorizontalAlignment="Left" Margin="10,425,0,0" VerticalAlignment="Top" Width="112" Click="calcGPAbtn_Click"/>
+
+            </Grid>
+            <Grid HorizontalAlignment="Left" Height="464" Margin="147,10,0,0" VerticalAlignment="Top" Width="86">
+                <TextBlock x:Name="creditHrs" HorizontalAlignment="Center" Margin="10,10,0,0" TextWrapping="Wrap" Text="Credit Hours" VerticalAlignment="Top"/>
+                <TextBox x:Name="hrs1" HorizontalAlignment="Left" Margin="10,55,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="66"/>
+                <TextBox x:Name="hrs2" HorizontalAlignment="Left" Margin="10,92,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="66"/>
+                <TextBox x:Name="hrs3" HorizontalAlignment="Left" Margin="10,129,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="66"/>
+                <TextBox x:Name="hrs4" HorizontalAlignment="Left" Margin="10,166,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="66"/>
+                <TextBox x:Name="hrs5" HorizontalAlignment="Left" Margin="10,203,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="66"/>
+                <TextBox x:Name="hrs6" HorizontalAlignment="Left" Margin="10,240,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="66"/>
+                <TextBox x:Name="hrs7" HorizontalAlignment="Left" Margin="10,277,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="66"/>
+                <TextBox x:Name="hrs8" HorizontalAlignment="Left" Margin="10,314,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="66"/>
+                <TextBox x:Name="hrs9" HorizontalAlignment="Left" Margin="10,351,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="66"/>
+                <TextBox x:Name="hrs10" HorizontalAlignment="Left" Margin="10,388,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="66"/>
+                <Grid Height="39" Margin="0,415,-75,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="161">
+                    <TextBlock x:Name="gpaResult" HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="77"/>
+                    <TextBlock x:Name="txtBlock" HorizontalAlignment="Left" Margin="92,17,0,0" TextWrapping="Wrap" Text="/ 4.0" FontSize="9" VerticalAlignment="Top"/>
+
+                </Grid>
+
+
+
+            </Grid>
+            <Grid HorizontalAlignment="Left" Height="464" Margin="238,10,0,0" VerticalAlignment="Top" Width="92">
+                <TextBlock x:Name="grade" HorizontalAlignment="Center" Margin="10,10,0,0" TextWrapping="Wrap" Text="Grade" VerticalAlignment="Top"/>
+                <ComboBox x:Name="grade1" HorizontalAlignment="Left" Margin="10,55,0,0" VerticalAlignment="Top" Width="72">
+                    <ComboBoxItem Content="A" Height="30" Width="100"/>
+                    <ComboBoxItem Content="A-" Height="30" Width="100"/>
+                    <ComboBoxItem Content="B+" Height="30" Width="100"/>
+                    <ComboBoxItem Content="B" Height="30" Width="100"/>
+                    <ComboBoxItem Content="B-" Height="30" Width="100"/>
+                    <ComboBoxItem Content="C+" Height="30" Width="100"/>
+                    <ComboBoxItem Content="C" Height="30" Width="100"/>
+                    <ComboBoxItem Content="C-" Height="30" Width="100"/>
+                    <ComboBoxItem Content="D+" Height="30" Width="100"/>
+                    <ComboBoxItem Content="D" Height="30" Width="100"/>
+                    <ComboBoxItem Content="D-" Height="30" Width="100"/>
+                    <ComboBoxItem Content="F" Height="30" Width="100"/>
+                </ComboBox>
+
+                <ComboBox x:Name="grade2" HorizontalAlignment="Left" Margin="10,92,0,0" VerticalAlignment="Top" Width="72">
+                    <ComboBoxItem Content="A" Height="30" Width="100"/>
+                    <ComboBoxItem Content="A-" Height="30" Width="100"/>
+                    <ComboBoxItem Content="B+" Height="30" Width="100"/>
+                    <ComboBoxItem Content="B" Height="30" Width="100"/>
+                    <ComboBoxItem Content="B-" Height="30" Width="100"/>
+                    <ComboBoxItem Content="C+" Height="30" Width="100"/>
+                    <ComboBoxItem Content="C" Height="30" Width="100"/>
+                    <ComboBoxItem Content="C-" Height="30" Width="100"/>
+                    <ComboBoxItem Content="D+" Height="30" Width="100"/>
+                    <ComboBoxItem Content="D" Height="30" Width="100"/>
+                    <ComboBoxItem Content="D-" Height="30" Width="100"/>
+                    <ComboBoxItem Content="F" Height="30" Width="100"/>
+                </ComboBox>
+
+                <ComboBox x:Name="grade3" HorizontalAlignment="Left" Margin="10,129,0,0" VerticalAlignment="Top" Width="72">
+                    <ComboBoxItem Content="A" Height="30" Width="100"/>
+                    <ComboBoxItem Content="A-" Height="30" Width="100"/>
+                    <ComboBoxItem Content="B+" Height="30" Width="100"/>
+                    <ComboBoxItem Content="B" Height="30" Width="100"/>
+                    <ComboBoxItem Content="B-" Height="30" Width="100"/>
+                    <ComboBoxItem Content="C+" Height="30" Width="100"/>
+                    <ComboBoxItem Content="C" Height="30" Width="100"/>
+                    <ComboBoxItem Content="C-" Height="30" Width="100"/>
+                    <ComboBoxItem Content="D+" Height="30" Width="100"/>
+                    <ComboBoxItem Content="D" Height="30" Width="100"/>
+                    <ComboBoxItem Content="D-" Height="30" Width="100"/>
+                    <ComboBoxItem Content="F" Height="30" Width="100"/>
+
+                </ComboBox>
+
+                <ComboBox x:Name="grade4" HorizontalAlignment="Left" Margin="10,166,0,0" VerticalAlignment="Top" Width="72">
+                    <ComboBoxItem Content="A" Height="30" Width="100"/>
+                    <ComboBoxItem Content="A-" Height="30" Width="100"/>
+                    <ComboBoxItem Content="B+" Height="30" Width="100"/>
+                    <ComboBoxItem Content="B" Height="30" Width="100"/>
+                    <ComboBoxItem Content="B-" Height="30" Width="100"/>
+                    <ComboBoxItem Content="C+" Height="30" Width="100"/>
+                    <ComboBoxItem Content="C" Height="30" Width="100"/>
+                    <ComboBoxItem Content="C-" Height="30" Width="100"/>
+                    <ComboBoxItem Content="D+" Height="30" Width="100"/>
+                    <ComboBoxItem Content="D" Height="30" Width="100"/>
+                    <ComboBoxItem Content="D-" Height="30" Width="100"/>
+                    <ComboBoxItem Content="F" Height="30" Width="100"/>
+
+                </ComboBox>
+
+                <ComboBox x:Name="grade5" HorizontalAlignment="Left" Margin="10,203,0,0" VerticalAlignment="Top" Width="72">
+                    <ComboBoxItem Content="A" Height="30" Width="100"/>
+                    <ComboBoxItem Content="A-" Height="30" Width="100"/>
+                    <ComboBoxItem Content="B+" Height="30" Width="100"/>
+                    <ComboBoxItem Content="B" Height="30" Width="100"/>
+                    <ComboBoxItem Content="B-" Height="30" Width="100"/>
+                    <ComboBoxItem Content="C+" Height="30" Width="100"/>
+                    <ComboBoxItem Content="C" Height="30" Width="100"/>
+                    <ComboBoxItem Content="C-" Height="30" Width="100"/>
+                    <ComboBoxItem Content="D+" Height="30" Width="100"/>
+                    <ComboBoxItem Content="D" Height="30" Width="100"/>
+                    <ComboBoxItem Content="D-" Height="30" Width="100"/>
+                    <ComboBoxItem Content="F" Height="30" Width="100"/>
+                </ComboBox>
+
+                <ComboBox x:Name="grade6" HorizontalAlignment="Left" Margin="10,240,0,0" VerticalAlignment="Top" Width="72">
+                    <ComboBoxItem Content="A" Height="30" Width="100"/>
+                    <ComboBoxItem Content="A-" Height="30" Width="100"/>
+                    <ComboBoxItem Content="B+" Height="30" Width="100"/>
+                    <ComboBoxItem Content="B" Height="30" Width="100"/>
+                    <ComboBoxItem Content="B-" Height="30" Width="100"/>
+                    <ComboBoxItem Content="C+" Height="30" Width="100"/>
+                    <ComboBoxItem Content="C" Height="30" Width="100"/>
+                    <ComboBoxItem Content="C-" Height="30" Width="100"/>
+                    <ComboBoxItem Content="D+" Height="30" Width="100"/>
+                    <ComboBoxItem Content="D" Height="30" Width="100"/>
+                    <ComboBoxItem Content="D-" Height="30" Width="100"/>
+                    <ComboBoxItem Content="F" Height="30" Width="100"/>
+                </ComboBox>
+
+
+                <ComboBox x:Name="grade7" HorizontalAlignment="Left" Margin="10,277,0,0" VerticalAlignment="Top" Width="72">
+                    <ComboBoxItem Content="A" Height="30" Width="100"/>
+                    <ComboBoxItem Content="A-" Height="30" Width="100"/>
+                    <ComboBoxItem Content="B+" Height="30" Width="100"/>
+                    <ComboBoxItem Content="B" Height="30" Width="100"/>
+                    <ComboBoxItem Content="B-" Height="30" Width="100"/>
+                    <ComboBoxItem Content="C+" Height="30" Width="100"/>
+                    <ComboBoxItem Content="C" Height="30" Width="100"/>
+                    <ComboBoxItem Content="C-" Height="30" Width="100"/>
+                    <ComboBoxItem Content="D+" Height="30" Width="100"/>
+                    <ComboBoxItem Content="D" Height="30" Width="100"/>
+                    <ComboBoxItem Content="D-" Height="30" Width="100"/>
+                    <ComboBoxItem Content="F" Height="30" Width="100"/>
+                </ComboBox>
+
+                <ComboBox x:Name="grade8" HorizontalAlignment="Left" Margin="10,314,0,0" VerticalAlignment="Top" Width="72">
+                    <ComboBoxItem Content="A" Height="30" Width="100"/>
+                    <ComboBoxItem Content="A-" Height="30" Width="100"/>
+                    <ComboBoxItem Content="B+" Height="30" Width="100"/>
+                    <ComboBoxItem Content="B" Height="30" Width="100"/>
+                    <ComboBoxItem Content="B-" Height="30" Width="100"/>
+                    <ComboBoxItem Content="C+" Height="30" Width="100"/>
+                    <ComboBoxItem Content="C" Height="30" Width="100"/>
+                    <ComboBoxItem Content="C-" Height="30" Width="100"/>
+                    <ComboBoxItem Content="D+" Height="30" Width="100"/>
+                    <ComboBoxItem Content="D" Height="30" Width="100"/>
+                    <ComboBoxItem Content="D-" Height="30" Width="100"/>
+                    <ComboBoxItem Content="F" Height="30" Width="100"/>
+
+                </ComboBox>
+
+                <ComboBox x:Name="grade9" HorizontalAlignment="Left" Margin="10,351,0,0" VerticalAlignment="Top" Width="72">
+                    <ComboBoxItem Content="A" Height="30" Width="100"/>
+                    <ComboBoxItem Content="A-" Height="30" Width="100"/>
+                    <ComboBoxItem Content="B+" Height="30" Width="100"/>
+                    <ComboBoxItem Content="B" Height="30" Width="100"/>
+                    <ComboBoxItem Content="B-" Height="30" Width="100"/>
+                    <ComboBoxItem Content="C+" Height="30" Width="100"/>
+                    <ComboBoxItem Content="C" Height="30" Width="100"/>
+                    <ComboBoxItem Content="C-" Height="30" Width="100"/>
+                    <ComboBoxItem Content="D+" Height="30" Width="100"/>
+                    <ComboBoxItem Content="D" Height="30" Width="100"/>
+                    <ComboBoxItem Content="D-" Height="30" Width="100"/>
+                    <ComboBoxItem Content="F" Height="30" Width="100"/>
+                </ComboBox>
+
+                <ComboBox x:Name="grade10" HorizontalAlignment="Left" Margin="10,388,0,0" VerticalAlignment="Top" Width="72">
+                    <ComboBoxItem Content="A" Height="30" Width="100"/>
+                    <ComboBoxItem Content="A-" Height="30" Width="100"/>
+                    <ComboBoxItem Content="B+" Height="30" Width="100"/>
+                    <ComboBoxItem Content="B" Height="30" Width="100"/>
+                    <ComboBoxItem Content="B-" Height="30" Width="100"/>
+                    <ComboBoxItem Content="C+" Height="30" Width="100"/>
+                    <ComboBoxItem Content="C" Height="30" Width="100"/>
+                    <ComboBoxItem Content="C-" Height="30" Width="100"/>
+                    <ComboBoxItem Content="D+" Height="30" Width="100"/>
+                    <ComboBoxItem Content="D" Height="30" Width="100"/>
+                    <ComboBoxItem Content="D-" Height="30" Width="100"/>
+                    <ComboBoxItem Content="F" Height="30" Width="100"/>
+                </ComboBox>
+
+
+            </Grid>
+
+
+        </Grid>
+    </Grid>
+
+</Page>

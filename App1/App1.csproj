@@ -103,6 +103,9 @@
     <Compile Include="GoogleAuth.xaml.cs">
       <DependentUpon>GoogleAuth.xaml</DependentUpon>
     </Compile>
+    <Compile Include="GPACalc.xaml.cs">
+      <DependentUpon>GPACalc.xaml</DependentUpon>
+    </Compile>
     <Compile Include="InvPage.xaml.cs">
       <DependentUpon>InvPage.xaml</DependentUpon>
     </Compile>
@@ -151,6 +154,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="GoogleAuth.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GPACalc.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
