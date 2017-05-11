@@ -11,7 +11,6 @@
         <Image x:Name="topLogo" HorizontalAlignment="Center" Height="94" Margin="112,10,112,0" VerticalAlignment="Top" Width="136" Source="rasCollege.jpg"/>
 
         <Grid HorizontalAlignment="Center" Height="37" VerticalAlignment="Top" Width="340" Margin="10,104,10,0">
-            <HyperlinkButton x:Uid="hlkWebSite" Content="Go" HorizontalAlignment="Left" Margin="251,-283,0,295" VerticalAlignment="Center" Foreground="#FF00A200" FontSize="10" Width="79"/>
             <HyperlinkButton x:Name="hypLinkPage2" Content="Faculty Page" HorizontalAlignment="Left" Margin="10,12,0,0" VerticalAlignment="Center" Foreground="#FF00A200" FontSize="10" Click="hypLinkPage2_Click"/>
             <HyperlinkButton Content="To Do Items" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,12,217,0" Foreground="#FF00A200" FontSize="10" Click="HyperlinkButton_Click"/>
             <HyperlinkButton x:Name="todo2" Content="To Do 2" HorizontalAlignment="Left" Margin="128,12,0,0" VerticalAlignment="Center" Foreground="#FF00A200" FontSize="10" Click="todo2_Click"/>
@@ -19,6 +18,13 @@
             <HyperlinkButton x:Name="GPACalcPage" Content="GPA Calculator" HorizontalAlignment="Stretch" Margin="258,12,10,0" VerticalAlignment="Top" FontSize="10" Foreground="#FF00A200" Click="GPACalcPage_Click"/>
 
         </Grid>
+
+        <Image Opacity="0.35" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,148,0,132">
+            <Image.Source>
+                <BitmapImage x:Name="rasIcon" DecodePixelWidth="200" UriSource="rasIcon.jpeg" />
+            </Image.Source>
+        </Image>
+
         <Button x:Name="btnCourse1" Content="Course1" HorizontalAlignment="Left" Margin="10,321,0,0" VerticalAlignment="Top" Click="btnCourse1_Click" Background="#FF00A200" Width="100"/>
         <Button x:Name="btnCourse2" Content="Course2" HorizontalAlignment="Center" Margin="115,321,112,0" VerticalAlignment="Top" Click="btnCourse2_Click" Background="#FF00A200" Width="133"/>
         <Button x:Name="btnCourse3" Content="Course3" HorizontalAlignment="Right" Margin="0,321,10,0" VerticalAlignment="Top" Click="btnCourse3_Click" Background="#FF00A200" Width="97"/>

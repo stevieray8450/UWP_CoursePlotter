@@ -11,8 +11,8 @@
     <AssemblyName>App1</AssemblyName>
     <DefaultLanguage>en-US</DefaultLanguage>
     <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
-    <TargetPlatformVersion>10.0.14393.0</TargetPlatformVersion>
-    <TargetPlatformMinVersion>10.0.10586.0</TargetPlatformMinVersion>
+    <TargetPlatformVersion>10.0.10240.0</TargetPlatformVersion>
+    <TargetPlatformMinVersion>10.0.10240.0</TargetPlatformMinVersion>
     <MinimumVisualStudioVersion>14</MinimumVisualStudioVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{A5A43C5B-DE2A-4C0C-9213-0A381AF9435A};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -127,6 +127,19 @@
     <None Include="App1_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\icon-100x100.png" />
+    <Content Include="Assets\icon-150x150.png" />
+    <Content Include="Assets\icon-310x310.png" />
+    <Content Include="Assets\icon-310x310.scale-100.png" />
+    <Content Include="Assets\icon-310x310.scale-200.png" />
+    <Content Include="Assets\icon-50x50.png" />
+    <Content Include="Assets\icon-620x300.png" />
+    <Content Include="Assets\icon-620x620.png" />
+    <Content Include="Assets\icon-71x71.png" />
+    <Content Include="Assets\icon-71x71.scale-100.png" />
+    <Content Include="Assets\icon-71x71.scale-200.png" />
+    <Content Include="Assets\icon-88x88.png" />
+    <Content Include="Assets\splash_icon.jpg" />
     <Content Include="cynthiaMoonhowler.png" />
     <Content Include="rasCollege.gif" />
     <Content Include="rasCollege.jpg" />

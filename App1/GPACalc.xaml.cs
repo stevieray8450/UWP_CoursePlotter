@@ -36,6 +36,12 @@ namespace App1
             this.Frame.Navigate(typeof(Faculty));
         }
 
+        private void HyperlinkButton_Click_1(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(MainPage));
+
+        }
+
         private void HyperlinkButton_Click(object sender, RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(NewPage));
@@ -149,5 +155,6 @@ namespace App1
             return Math.Round(totalGPA, 2).ToString();
         }
 
-        }
+
+    }
     }

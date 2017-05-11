@@ -30,6 +30,38 @@ namespace App1
             GetGoogleAuth();
         }
 
+        public void hypLinkPage2_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(Faculty));
+        }
+
+        private void HyperlinkButton_Click_1(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(MainPage));
+
+        }
+
+        private void HyperlinkButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(NewPage));
+
+        }
+
+        private void todo2_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(UserAuth));
+        }
+
+        private void invPage_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(InvPage));
+        }
+
+        private void GPACalcPage_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(GPACalc));
+        }
+
         public async void GetGoogleAuth()
         {
             //using Windows.Security.Authentication.Web;
@@ -72,10 +104,7 @@ namespace App1
             }
         }
 
-        private void HyperlinkButton_Click(object sender, RoutedEventArgs e)
-        {
-            this.Frame.Navigate(typeof(MainPage));
-        }
+
     }
 
 }

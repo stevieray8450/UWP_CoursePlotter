@@ -39,6 +39,37 @@ namespace App1
             this.InitializeComponent();
         }
 
+        public void hypLinkPage2_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(Faculty));
+        }
+
+        private void HyperlinkButton_Click_1(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(MainPage));
+        }
+
+        private void HyperlinkButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(NewPage));
+
+        }
+
+        private void todo2_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(UserAuth));
+        }
+
+        private void invPage_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(InvPage));
+        }
+
+        private void GPACalcPage_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(GPACalc));
+        }
+
         public int IsAuth { get; set; }
 
         //[DataTable("Auth_Cred")]
@@ -144,6 +175,7 @@ namespace App1
         {
             InitLocalStoreAsync();
         }
+
 
     }
 }

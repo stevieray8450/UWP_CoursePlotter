@@ -33,6 +33,12 @@ namespace App1
             this.Frame.Navigate(typeof(NewPage));
         }
 
+        private void HyperlinkButton_Click_1(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(MainPage));
+
+        }
+
         private void invPage_Click(object sender, RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(InvPage));
@@ -46,6 +52,11 @@ namespace App1
         public void hypLinkPage2_Click(object sender, RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(Faculty));
+        }
+
+        private void GPACalcPage_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(GPACalc));
         }
 
         private void button_Click(object sender, RoutedEventArgs e)
@@ -102,6 +113,8 @@ namespace App1
 
         IMobileServiceSyncTable<CourseComment> courseCommentsTable = App.MobileService.GetSyncTable<CourseComment>();
         MobileServiceCollection<CourseComment, CourseComment> items;
+
+
 
         //private async Task InitLocalStoreAsync()
         //{
@@ -185,8 +198,8 @@ namespace App1
         //    items.Remove(item);
         //    comments.Focus(Windows.UI.Xaml.FocusState.Unfocused);
 
-            ////await SyncAsync(); // offline sync
-        }
+        ////await SyncAsync(); // offline sync
+    }
 }
 
 

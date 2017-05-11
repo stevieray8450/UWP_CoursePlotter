@@ -8,6 +8,25 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+        <HyperlinkButton x:Uid="imageLink" HorizontalAlignment="Center" VerticalAlignment="Top" Click="HyperlinkButton_Click_1">
+            <Image x:Name="topLogo" HorizontalAlignment="Center" Height="94" Margin="112,10,112,0" VerticalAlignment="Top" Width="136" Source="rasCollege.jpg"/>
+        </HyperlinkButton>
+        
+        <Grid HorizontalAlignment="Center" Height="37" VerticalAlignment="Top" Width="340" Margin="10,104,10,0">
+            <HyperlinkButton x:Name="hypLinkPage2" Content="Faculty Page" HorizontalAlignment="Left" Margin="10,12,0,0" VerticalAlignment="Center" Foreground="#FF00A200" FontSize="10" Click="hypLinkPage2_Click"/>
+            <HyperlinkButton Content="To Do Items" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,12,217,0" Foreground="#FF00A200" FontSize="10" Click="HyperlinkButton_Click"/>
+            <HyperlinkButton x:Name="todo2" Content="To Do 2" HorizontalAlignment="Left" Margin="128,12,0,0" VerticalAlignment="Center" Foreground="#FF00A200" FontSize="10" Click="todo2_Click"/>
+            <HyperlinkButton x:Name="invPage" Content="Inventory Page" HorizontalAlignment="Left" Margin="167,12,0,0" VerticalAlignment="Top" Foreground="#FF00A200" FontSize="10" Width="91" Click="invPage_Click"/>
+            <HyperlinkButton x:Name="GPACalcPage" Content="GPA Calculator" HorizontalAlignment="Stretch" Margin="258,12,10,0" VerticalAlignment="Top" FontSize="10" Foreground="#FF00A200" Click="GPACalcPage_Click"/>
+        </Grid>
+
+        <Image Opacity="0.35" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,148,0,132">
+            <Image.Source>
+                <BitmapImage x:Name="rasIcon" DecodePixelWidth="200" UriSource="rasIcon.jpeg" />
+            </Image.Source>
+        </Image>
+
         <TextBox x:Name="txtBoxUserId" HorizontalAlignment="Left" Margin="139,197,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="148"/>
         <TextBox x:Name="lblUserID" HorizontalAlignment="Left" Margin="50,197,0,0" TextWrapping="Wrap" Text="UserID:" VerticalAlignment="Top" IsReadOnly="True" BorderBrush="#FFFDF9F9"/>
         <TextBox x:Name="lblPasswd" HorizontalAlignment="Left" Margin="34,242,0,0" TextWrapping="Wrap" Text="Password:" VerticalAlignment="Top" BorderBrush="#FFF9F9F9" IsReadOnly="True"/>

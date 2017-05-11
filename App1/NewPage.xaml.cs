@@ -27,6 +27,11 @@ namespace App1
             this.Frame.Navigate(typeof(NewPage));
         }
 
+        private void HyperlinkButton_Click_1(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(MainPage));
+        }
+
         private void invPage_Click(object sender, RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(InvPage));
@@ -41,6 +46,12 @@ namespace App1
         {
             this.Frame.Navigate(typeof(Faculty));
         }
+
+        private void GPACalcPage_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(GPACalc));
+        }
+
 
         public class TodoItem
         {

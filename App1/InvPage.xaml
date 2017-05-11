@@ -8,16 +8,25 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <Image x:Name="topLogo" HorizontalAlignment="Center" Height="94" Margin="112,10,112,0" VerticalAlignment="Top" Width="136" Source="rasCollege.jpg"/>
-
+        <HyperlinkButton HorizontalAlignment="Center" VerticalAlignment="Top" Click="HyperlinkButton_Click_1">
+            <Image x:Name="topLogo" HorizontalAlignment="Center" Height="94" Margin="112,10,112,0" VerticalAlignment="Top" Width="136" Source="rasCollege.jpg"/>
+        </HyperlinkButton>
+        
         <Grid HorizontalAlignment="Center" Height="37" VerticalAlignment="Top" Width="340" Margin="10,104,10,0">
-            <HyperlinkButton x:Uid="hlkWebSite" Content="Go" HorizontalAlignment="Left" Margin="251,-283,0,295" VerticalAlignment="Center" Foreground="#FF00A200" FontSize="10" Width="79"/>
-            <HyperlinkButton x:Name="hypLinkPage2" Content="Faculty Page" HorizontalAlignment="Center" Margin="10,12,275,0" VerticalAlignment="Center" Foreground="#FF00A200" FontSize="10" Click="hypLinkPage2_Click"/>
-            <HyperlinkButton Content="To Do Items" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,12,196,0" Foreground="#FF00A200" FontSize="10" Click="HyperlinkButton_Click"/>
-            <HyperlinkButton x:Name="todo2" Content="To Do 2" HorizontalAlignment="Left" Margin="177,12,0,0" VerticalAlignment="Center" Foreground="#FF00A200" FontSize="10" Click="todo2_Click"/>
-            <HyperlinkButton x:Name="invPage" Content="Inventory Page" HorizontalAlignment="Left" Margin="239,12,0,0" VerticalAlignment="Top" Foreground="#FF00A200" FontSize="10" Width="91" Click="invPage_Click"/>
+            <HyperlinkButton x:Name="hypLinkPage2" Content="Faculty Page" HorizontalAlignment="Left" Margin="10,12,0,0" VerticalAlignment="Center" Foreground="#FF00A200" FontSize="10" Click="hypLinkPage2_Click"/>
+            <HyperlinkButton Content="To Do Items" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,12,217,0" Foreground="#FF00A200" FontSize="10" Click="HyperlinkButton_Click"/>
+            <HyperlinkButton x:Name="todo2" Content="To Do 2" HorizontalAlignment="Left" Margin="128,12,0,0" VerticalAlignment="Center" Foreground="#FF00A200" FontSize="10" Click="todo2_Click"/>
+            <HyperlinkButton x:Name="invPage" Content="Inventory Page" HorizontalAlignment="Left" Margin="167,12,0,0" VerticalAlignment="Top" Foreground="#FF00A200" FontSize="10" Width="91" Click="invPage_Click"/>
+            <HyperlinkButton x:Name="GPACalcPage" Content="GPA Calculator" HorizontalAlignment="Stretch" Margin="258,12,10,0" VerticalAlignment="Top" FontSize="10" Foreground="#FF00A200" Click="GPACalcPage_Click"/>
         </Grid>
-        <Grid HorizontalAlignment="Left" Height="417" Margin="10,146,0,0" VerticalAlignment="Top" Width="340">
+
+        <Image Opacity="0.35" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,148,0,132">
+            <Image.Source>
+                <BitmapImage x:Name="rasIcon" DecodePixelWidth="200" UriSource="rasIcon.jpeg" />
+            </Image.Source>
+        </Image>
+
+        <Grid HorizontalAlignment="Center" Height="417" Margin="10,146,0,0" VerticalAlignment="Top" Width="340">
             <Button x:Name="Submit" Content="Submit" HorizontalAlignment="Left" Margin="10,108,0,0" VerticalAlignment="Top" Click="Submit_Click"/>
             <Button x:Name="btnRefresh" Content="Refresh" HorizontalAlignment="Left" Margin="10,145,0,0" VerticalAlignment="Top" Click="btnRefresh_Click"/>
             <TextBox x:Name="txtBoxInvItem" HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="Enter course material item here" VerticalAlignment="Top" Width="320" Height="45"/>
